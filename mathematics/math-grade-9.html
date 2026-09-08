@@ -34,64 +34,9 @@
         
         <h2>Mathematics - Grade 9</h2>
         
-        <div class="course-list">
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Algebra I</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Algebra 1 introduces students to the fundamental concepts of algebraic expressions, equations, and functions. Key topics include solving linear equations and inequalities, graphing linear functions, understanding systems of equations, and an introduction to quadratic functions and polynomials.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/60305/units" target="_blank" class="button-link">View Algebra I Curriculum</a>
-            </div>
-          </div>
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Geometry</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Geometry provides a comprehensive exploration of fundamental geometric concepts. Students will delve into Euclidean geometry, studying properties of points, lines, planes, and solids, with an emphasis on logical reasoning and proofs, transformations, congruence, and similarity.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38643/units" target="_blank" class="button-link">View Geometry Curriculum</a>
-            </div>
-          </div>
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Math Proficiency</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This Math Proficiency course is designed to strengthen students' foundational mathematical skills and concepts essential for success in higher-level mathematics. The curriculum focuses on reinforcing arithmetic operations, number sense, and pre-algebraic concepts.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/44715/units" target="_blank" class="button-link">View Math Proficiency Curriculum</a>
-            </div>
-          </div>
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Algebra II</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This Algebra 2 course expands upon the concepts introduced in Algebra 1, delving deeper into advanced topics like polynomial, rational, exponential, and logarithmic functions, as well as sequences, series, and probability.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/36810/units" target="_blank" class="button-link">View Algebra II Curriculum</a>
-            </div>
-          </div>
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Consumer Economics/Personal Finance</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This Personal Finance course equips students with essential knowledge and skills to manage their financial lives effectively. Topics include budgeting, saving, investing, credit and debt, banking, insurance, and long-term financial planning.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38230/units" target="_blank" class="button-link">View Personal Finance Curriculum</a>
-            </div>
-          </div>
-          
+         <div class="course-list" id="grade9-math-container">
         </div>
+        
       </section>
     </main>
     
@@ -100,12 +45,17 @@
     </footer>
   </div>
 
+  <script src="../CourseData-Math.js"></script>
+
   <script>
     function toggleDropdown(button) {
       button.classList.toggle('active');
       const content = button.nextElementSibling;
       content.classList.toggle('active');
     }
+
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade9-math-container", 9);
   </script>
 </body>
 </html>

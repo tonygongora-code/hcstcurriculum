@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../images/hcst-logo.png">
+  <style>
+    /* Ensures the header link matches the site style */
+    header .logo a { text-decoration: none; color: white; }
+  </style>
 </head>
 <body>
   <div class="page-container">
@@ -35,97 +39,10 @@
      
       <h2>Mathematics - Grade 12</h2>
       
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-          <button class="course-item" onclick="toggleDropdown(this)">
-            <span>Pre-Calculus</span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <p>Pre-Calculus is designed to prepare students for calculus by covering advanced topics in algebra and trigonometry. Key areas of study include functions, graphing, complex numbers, conic sections, and an introduction to limits.</p>
-            <a href="https://hcst-5154.chalk.com/public/map/38984/units" target="_blank" class="button-link">View Pre-Calculus Curriculum Map</a>
-          </div>
-        </div>
-
-        <div class="course-item-dropdown">
-          <button class="course-item" onclick="toggleDropdown(this)">
-            <span>AP Precalculus</span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <p>AP Precalculus is a college-level course that explores functions in greater depth, preparing students for the AP exam and subsequent calculus studies. Topics include polynomial, rational, exponential, logarithmic, and trigonometric functions.</p>
-            <a href="https://hcst-5154.chalk.com/public/map/47289/units" target="_blank" class="button-link">View AP Precalculus Curriculum Map</a>
-          </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Calculus</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Calculus provides an introduction to the concepts of limits, derivatives, and integrals. The course focuses on the application of these principles to understand rates of change and the area under curves, building a strong foundation for advanced mathematics.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/37287/units" target="_blank" class="button-link">View Calculus Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Calculus AB</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>AP Calculus AB is a college-level course equivalent to a first-semester college calculus course. It covers differential and integral calculus, including limits, derivatives, and their applications, as well as the Fundamental Theorem of Calculus.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38814/units" target="_blank" class="button-link">View AP Calculus AB Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Calculus BC</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>AP Calculus BC is a full-year college-level course, equivalent to two semesters of college calculus. It extends the topics of AP Calculus AB to include additional methods of integration, polar and parametric equations, and infinite sequences and series.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38815/units" target="_blank" class="button-link">View AP Calculus BC Curriculum Map</a>
-            </div>
-        </div>
-        
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Statistics</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>AP Statistics is a college-level introductory course to statistics. Students will explore concepts such as exploring data, sampling and experimentation, anticipating patterns using probability, and statistical inference.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/56193/units" target="_blank" class="button-link">View AP Statistics Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Business Math</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Business Math focuses on the practical application of mathematical skills in a business context. Topics include payroll, interest rates, financial reports, inventory, and other essential calculations for business operations.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/37222/units" target="_blank" class="button-link">View Business Math Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Probability and Statistics</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course introduces the fundamental concepts of collecting, analyzing, and interpreting data to make sense of uncertainty. Students will learn how to describe data sets using statistical measures, understand the principles of probability, design effective surveys and experiments, and use data from a small sample to draw reliable conclusions about a larger population. The curriculum emphasizes critical thinking, providing the tools to analyze real-world information and evaluate the validity of claims seen in news, science, and everyday life.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38989/units" target="_blank" class="button-link">View Probability and Statistics Curriculum Map</a>
-            </div>
-        </div>
-
+      <!-- The JavaScript will inject the Grade 12 courses into this empty div -->
+      <div class="course-list" id="grade12-math-container">
       </div>
+
     </section>
   </main>
 
@@ -134,12 +51,19 @@
   </footer>
 </div>
 
+<!-- Load the central data file -->
+<script src="../CourseData-Math.js"></script>
+
+<!-- Scripts to handle the dropdowns and render the courses -->
 <script>
   function toggleDropdown(button) {
     button.classList.toggle('active');
     const content = button.nextElementSibling;
     content.classList.toggle('active');
   }
+
+  // Tell the script to render ONLY courses tagged with grade 12
+  renderCourses("grade12-math-container", 12);
 </script>
 
 </body>

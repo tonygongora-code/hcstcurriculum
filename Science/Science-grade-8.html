@@ -32,35 +32,28 @@
       <a href="Science-grade-9.html" class="button-link">Next: Grade 9 →</a>
       </div>
       <h2>Science - Grade 8</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Science 8</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course focuses on Earth and space science, exploring topics such as plate tectonics, weather and climate, and the solar system. Students will also investigate core principles of physical science, including forces, motion, and the properties of waves.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/39850/units" target="_blank" class="button-link">View Science 8 Curriculum Map</a>
-            </div>
+            <div class="course-list" id="grade8-science-container">
         </div>
+        
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+  <script src="../CourseData-Science.js"></script>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+  <script>
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
 
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade8-science-container", 8);
+  </script>
 </body>
 </html>

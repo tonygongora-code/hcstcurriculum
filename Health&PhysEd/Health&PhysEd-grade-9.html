@@ -12,7 +12,7 @@
   <div class="page-container">
   <header>
     <div class="logo">
-      <a href="../index.html"><h1>HCST Curriculum</h1></a>>
+      <a href="../index.html"><h1>HCST Curriculum</h1></a>
     </div>
     <nav>
       <ul>
@@ -32,46 +32,30 @@
         <a href="Health&PhysEd-grade-10.html" class="button-link">Next: Grade 10 →</a>
       </div>
       <h2>Health and Physical Education - Grade 9</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Health I</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This foundational high school health course covers a wide range of topics essential for adolescent well-being. Areas of study include mental and emotional health, nutrition, substance abuse, and disease prevention, with a focus on developing healthy habits.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38435/units" target="_blank" class="button-link">View Health I Curriculum Map</a>
-            </div>
+      <div class="course-list" id="grade9-PE-container">
         </div>
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Physical Education I</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Physical Education I introduces high school students to a variety of team and individual sports and fitness activities. The course emphasizes the development of physical skills, teamwork, and an understanding of the principles of personal fitness.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38762/units" target="_blank" class="button-link">View PE I Curriculum Map</a>
-            </div>
-        </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+  <script src="../CourseData-PE.js"></script>
+
+  <script>
+    // Handles the accordion open/close animation
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
+
+    // Tell the script to render "All" courses into the container above
+    renderCourses("grade9-PE-container", 9);
+  </script>
 
 </body>
 </html>

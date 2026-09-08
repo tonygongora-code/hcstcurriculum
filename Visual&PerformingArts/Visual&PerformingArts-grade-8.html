@@ -32,35 +32,30 @@
       <a href="Visual&PerformingArts-grade-9.html" class="button-link">Next: Grade 9 →</a>
       </div>
       <h2>Visual and Performing Arts - Grade 8</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Visual and Performing Arts 8</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>In this course, students prepare for high school-level arts by developing a portfolio or performance piece. They will refine their technical skills in a chosen discipline and study the historical and cultural context of various art forms.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/39247/units" target="_blank" class="button-link">View Arts 8 Curriculum Map</a>
-            </div>
+      <div class="course-list" id="grade8-arts-container">
         </div>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+      </section>
+    </main>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="../CourseData-Arts.js"></script>
+
+  <script>
+    // Handles the accordion open/close animation
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
+
+    // Tell the script to render "All" courses into the container above
+    renderCourses("grade8-arts-container", 8);
+  </script>
 
 </body>
 </html>

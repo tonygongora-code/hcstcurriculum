@@ -32,123 +32,28 @@
       <a href="socialStudies-grade-12.html" class="button-link">Next: Grade 12 →</a>
       </div>
       <h2>Social Studies - Grade 11</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP US History</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This college-level course provides a detailed examination of American history. Students analyze historical materials, develop historical thinking skills, and prepare for the AP exam.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38915/units" target="_blank" class="button-link">View APUSH Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP US History II</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This college-level course covers American history from the late 19th century to the present, focusing on industrialization, global conflicts, and social movements.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/72987/units" target="_blank" class="button-link">View APUSH II Curriculum Map</a>
-            </div>
+         <div class="course-list" id="grade11-socialstudies-container">
         </div>
         
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP US Government and Politics</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>A college-level course providing an analytical perspective on government and politics in the United States, including the study of the Constitution, political beliefs, and policy processes.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38900/units" target="_blank" class="button-link">View AP Gov Curriculum Map</a>
-            </div>
-        </div>
-        
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP World History: Modern</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This college-level course covers the history of the world from 1200 C.E. to the present, focusing on significant events, individuals, and processes.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/62305/units" target="_blank" class="button-link">View AP World History Curriculum Map</a>
-            </div>
-        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Human Geography</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>A college-level course on the systematic study of patterns and processes that have shaped human understanding, use, and alteration of Earth's surface.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38848/units" target="_blank" class="button-link">View AP Human Geo Curriculum Map</a>
-            </div>
-        </div>
+  <script src="../CourseData-SocialStudies.js"></script>
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Psychology</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>A college-level course introducing the systematic and scientific study of the behavior and mental processes of human beings and other animals.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/54118/units" target="_blank" class="button-link">View AP Psychology Curriculum Map</a>
-            </div>
-        </div>
+  <script>
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>US History II</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course examines U.S. history from the late 19th century to the present, covering industrialization, immigration, America's role as a world power, and major social movements.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/39200/units" target="_blank" class="button-link">View US History II Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>History Through Film</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>An elective course analyzing historical events through film. Students critically evaluate cinematic portrayals of history, comparing them with historical documents.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38439/units" target="_blank" class="button-link">View Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Rock and Roll History</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course traces the history and cultural impact of rock and roll, exploring how the music reflected and influenced social, political, and economic changes.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/68184/units" target="_blank" class="button-link">View Curriculum Map</a>
-            </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
-
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
-
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade11-socialstudies-container", 11);
+  </script>
 </body>
 </html>

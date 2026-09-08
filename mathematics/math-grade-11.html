@@ -35,90 +35,28 @@
 
       <h2>Mathematics - Grade 11</h2>
       
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-          <button class="course-item" onclick="toggleDropdown(this)">
-            <span>Algebra II</span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <p>This course expands upon concepts from Algebra I, delving into advanced topics like polynomial, rational, exponential, and logarithmic functions, as well as sequences, series, probability, and statistics.</p>
-            <a href="https://hcst-5154.chalk.com/public/map/36810/units" target="_blank" class="button-link">View Algebra II Curriculum Map</a>
-          </div>
+         <div class="course-list" id="grade11-math-container">
         </div>
         
-        <div class="course-item-dropdown">
-          <button class="course-item" onclick="toggleDropdown(this)">
-            <span>Pre-Calculus</span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <p>Pre-Calculus is designed to prepare students for calculus by covering advanced topics in algebra and trigonometry. Key areas of study include functions, graphing, complex numbers, conic sections, and an introduction to limits.</p>
-            <a href="https://hcst-5154.chalk.com/public/map/38984/units" target="_blank" class="button-link">View Pre-Calculus Curriculum Map</a>
-          </div>
-        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-        <div class="course-item-dropdown">
-          <button class="course-item" onclick="toggleDropdown(this)">
-            <span>AP Precalculus</span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <p>AP Precalculus is a college-level course that explores functions in greater depth, preparing students for the AP exam and subsequent calculus studies. Topics include polynomial, rational, exponential, logarithmic, and trigonometric functions.</p>
-            <a href="https://hcst-5154.chalk.com/public/map/47289/units" target="_blank" class="button-link">View AP Precalculus Curriculum Map</a>
-          </div>
-        </div>
+  <script src="../CourseData-Math.js"></script>
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Calculus</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Calculus provides an introduction to the concepts of limits, derivatives, and integrals. The course focuses on the application of these principles to understand rates of change and the area under curves, building a strong foundation for advanced mathematics.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/37287/units" target="_blank" class="button-link">View Calculus Curriculum Map</a>
-            </div>
-        </div>
+  <script>
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Calculus AB</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>AP Calculus AB is a college-level course equivalent to a first-semester college calculus course. It covers differential and integral calculus, including limits, derivatives, and their applications, as well as the Fundamental Theorem of Calculus.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38814/units" target="_blank" class="button-link">View AP Calculus AB Curriculum Map</a>
-            </div>
-        </div>
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Calculus BC</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>AP Calculus BC is a full-year college-level course, equivalent to two semesters of college calculus. It extends the topics of AP Calculus AB to include additional methods of integration, polar and parametric equations, and infinite sequences and series.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38815/units" target="_blank" class="button-link">View AP Calculus BC Curriculum Map</a>
-            </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
-
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
-
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade11-math-container", 11);
+  </script>
 </body>
 </html>

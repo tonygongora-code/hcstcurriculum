@@ -33,46 +33,30 @@
     <a href="EnglishLanguageArts-grade-11.html" class="button-link">Next: Grade 11 →</a>
 </div>
       <h2>English Language Arts - Grade 10</h2>
-      <div class="course-list">
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>English II / American Literature</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course explores the rich tapestry of American literature from its origins to the contemporary period. Students will analyze how historical and cultural movements have shaped American literary traditions while further developing their skills in critical reading and argumentative writing.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/36838/units" target="_blank" class="button-link">View English II Curriculum Map</a>
-            </div>
+      <div class="course-list" id="grade10-ELA-container">
         </div>
-      </div>
 
-      <div class="course-list">
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>English II / AP Seminar</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This advanced, interdisciplinary course merges the literary analysis of a traditional 10th-grade English class with the rigorous research, argumentation, and communication skills of the AP Seminar curriculum. While exploring foundational works of American literature, students will learn to investigate real-world topics by analyzing complex texts and evaluating diverse sources. The course places a strong emphasis on conducting research, building evidence-based arguments, and collaborating with peers. It culminates in the submission of performance tasks for the AP exam, providing excellent preparation for other AP courses and college-level academic work.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38893/units" target="_blank" class="button-link">View AP Seminar Curriculum Map</a>
-            </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
   </div>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+  <script src="../CourseData-ELA.js"></script>
+
+  <script>
+    // Handles the accordion open/close animation
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
+
+    // Tell the script to render "All" courses into the container above
+    renderCourses("grade10-ELA-container", 10);
+  </script>
 
 </body>
 </html>

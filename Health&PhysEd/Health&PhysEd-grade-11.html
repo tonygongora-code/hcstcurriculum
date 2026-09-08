@@ -32,46 +32,30 @@
         <a href="Health&PhysEd-grade-12.html" class="button-link">Next: Grade 12 →</a>
       </div>
       <h2>Health and Physical Education - Grade 11</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Health III</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course focuses on advanced health topics, including family life and human sexuality, mental health awareness, and preparing for healthy independent living. Students will develop critical thinking skills to evaluate health information and services.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38437/units" target="_blank" class="button-link">View Health III Curriculum Map</a>
-            </div>
+             <div class="course-list" id="grade11-PE-container">
         </div>
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Physical Education III</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Physical Education III allows students to specialize in fitness and sports activities that align with their personal interests. The curriculum promotes leadership, advanced strategy, and the skills needed to maintain an active lifestyle beyond high school.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38764/units" target="_blank" class="button-link">View PE III Curriculum Map</a>
-            </div>
-        </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+  <script src="../CourseData-PE.js"></script>
+
+  <script>
+    // Handles the accordion open/close animation
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
+
+    // Tell the script to render "All" courses into the container above
+    renderCourses("grade11-PE-container", 11);
+  </script>
 
 </body>
 </html>

@@ -33,46 +33,30 @@
     <a href="EnglishLanguageArts-grade-12.html" class="button-link">Next: Grade 12 →</a>
 </div>
       <h2>English Language Arts - Grade 11</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP English Language and Composition A</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This college-level course engages students in becoming skilled readers of prose written in a variety of rhetorical contexts and in becoming skilled writers who compose for a variety of purposes. Students will focus on analyzing rhetoric and developing their own argumentative and analytical essays.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38833/units" target="_blank" class="button-link">View AP English Curriculum Map</a>
-            </div>
-        </div>
-        
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>English III / European Literature</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course offers a survey of major works of European literature. Students will explore how these texts reflect their historical and cultural contexts while analyzing literary movements, universal themes, and character development, further refining their essay-writing skills.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/36843/units" target="_blank" class="button-link">View English III Curriculum Map</a>
-            </div>
+      <div class="course-list" id="grade11-ELA-container">
         </div>
 
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
   </div>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+  <script src="../CourseData-ELA.js"></script>
+
+  <script>
+    // Handles the accordion open/close animation
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
+
+    // Tell the script to render "All" courses into the container above
+    renderCourses("grade11-ELA-container", 11);
+  </script>
 
 </body>
 </html>

@@ -32,35 +32,28 @@
       <a href="socialStudies-grade-8.html" class="button-link">Next: Grade 8 →</a>
       </div>
       <h2>Social Studies - Grade 7</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Social Studies 7</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course covers world history and geography from the medieval period to the early modern era. Students will explore the interactions between societies in Europe, Asia, Africa, and the Americas, focusing on the growth of empires, trade networks, and cultural exchanges.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38886/units" target="_blank" class="button-link">View Social Studies 7 Curriculum Map</a>
-            </div>
+         <div class="course-list" id="grade7-socialstudies-container">
         </div>
+        
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+  <script src="../CourseData-SocialStudies.js"></script>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+  <script>
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
 
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade7-socialstudies-container", 7);
+  </script>
 </body>
 </html>

@@ -32,46 +32,28 @@
       <a href="socialStudies-grade-10.html" class="button-link">Next: Grade 10 →</a>
       </div>
       <h2>Social Studies - Grade 9</h2>
-      <div class="course-list">
-
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>World History</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course provides a comprehensive survey of world history from early modern times to the present. Students will explore major global events, cultural developments, and the interactions between different societies, focusing on historical thinking skills.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/39976/units" target="_blank" class="button-link">View World History Curriculum Map</a>
-            </div>
+         <div class="course-list" id="grade9-socialstudies-container">
         </div>
+        
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
 
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP World History: Modern</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This college-level course covers the history of the world from 1200 C.E. to the present. Students will investigate significant events and processes, analyzing sources and crafting historical arguments in preparation for the AP exam.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/62305/units" target="_blank" class="button-link">View AP World History Curriculum Map</a>
-            </div>
-        </div>
+  <script src="../CourseData-SocialStudies.js"></script>
 
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+  <script>
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
-
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade9-socialstudies-container", 9);
+  </script>
 </body>
 </html>

@@ -34,53 +34,9 @@
         
         <h2>Mathematics - Grade 10</h2>
         
-        <div class="course-list">
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Geometry</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Geometry provides a comprehensive exploration of fundamental geometric concepts. Students will delve into Euclidean geometry, studying properties of points, lines, planes, and solids, with an emphasis on logical reasoning, proofs, and transformations.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38643/units" target="_blank" class="button-link">View Geometry Curriculum Map</a>
-            </div>
-          </div>
-          
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Algebra II</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>This course expands upon concepts from Algebra I, delving into advanced topics like polynomial, rational, exponential, and logarithmic functions, as well as sequences, series, probability, and statistics.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/36810/units" target="_blank" class="button-link">View Algebra II Curriculum Map</a>
-            </div>
-          </div>
-
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Pre-Calculus</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Pre-Calculus is designed to prepare students for calculus by covering advanced topics in algebra and trigonometry. Key areas of study include functions, graphing, complex numbers, conic sections, and an introduction to limits.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/38984/units" target="_blank" class="button-link">View Pre-Calculus Curriculum Map</a>
-            </div>
-          </div>
-
-          <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>AP Precalculus</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>AP Precalculus is a college-level course that explores functions in greater depth, preparing students for the AP exam and subsequent calculus studies. Topics include polynomial, rational, exponential, logarithmic, and trigonometric functions, as well as polar coordinates and vectors.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/47289/units" target="_blank" class="button-link">View AP Precalculus Curriculum Map</a>
-            </div>
-          </div>
-
+        <div class="course-list" id="grade10-math-container">
         </div>
+        
       </section>
     </main>
     
@@ -89,12 +45,17 @@
     </footer>
   </div>
 
+  <script src="../CourseData-Math.js"></script>
+
   <script>
     function toggleDropdown(button) {
       button.classList.toggle('active');
       const content = button.nextElementSibling;
       content.classList.toggle('active');
     }
+
+    // Tell the script to render ONLY courses tagged with grade 6
+    renderCourses("grade10-math-container", 10);
   </script>
 </body>
 </html>

@@ -32,33 +32,29 @@
     <a href="ComputerScience-grade-8.html" class="button-link">Next: Grade 8 →</a>
 </div>
      <h2>Computer Science - Grade 7</h2>
-     <div class="course-list">
-        <div class="course-item-dropdown">
-            <button class="course-item" onclick="toggleDropdown(this)">
-              <span>Technology 7</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <p>Building on the skills from Grade 6, this course introduces more advanced topics, including spreadsheet and data management, the fundamentals of web design using HTML, and an introduction to text-based programming concepts.</p>
-              <a href="https://hcst-5154.chalk.com/public/map/45322/units" target="_blank" class="button-link">View Technology 7 Curriculum Map</a>
-            </div>
+          <div class="course-list" id="grade7-cs-container">
         </div>
-     </div>
-   </section>
- </main>
 
-  <footer>
-    <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
-  </footer>
-</div>
+      </section>
+    </main>
 
-<script>
-  function toggleDropdown(button) {
-    button.classList.toggle('active');
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-  }
-</script>
+    <footer>
+      <p>&copy; 2026 Hudson County Schools of Technology. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="../CourseData-ComputerScience.js"></script>
+
+  <script>
+    // Handles the accordion open/close animation
+    function toggleDropdown(button) {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.classList.toggle('active');
+    }
+
+    renderCourses("grade7-cs-container", 7);
+  </script>
 
 </body>
 </html>
